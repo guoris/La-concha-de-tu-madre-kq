@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Centro Educativo</title>
+</head>
+<body>
+    <header>
+        <h1>Centro Educativo De Robótica</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/alumno.html" class="not-active">Área de Alumnos</a></li>
+                <li><a href="pages/docente.html" class="not-active">Área de Docentes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form class="login" id="loginForm">
+            <input class="user"type="text" id="username" placeholder="Nombre de usuario" required><br>
+            <input class="pass"type="password" id="password" placeholder="Contraseña" required><br>
+            <input class="btn-login" type="submit" value="Iniciar sesión">
+         </form>
+         
+      <h2 class="desc-title">Bienvenido al Centro Educativo</h2>
+        <h3 class="desc-text"> Un centro de robótica es un lugar o institución dedicada a la investigación, desarrollo, innovación y aplicación de la robótica. Estos centros suelen ser entidades multidisciplinarias que reúnen a expertos en campos como la ingeniería, la informática, la electrónica, la mecánica, la inteligencia artificial y otros para trabajar en proyectos relacionados con la robótica</h3>
+        <img src="https://img.freepik.com/vector-gratis/ninos-arreglando-robot-juntos_1308-79403.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699228800&semt=ais" alt=" Foto De Robotica"></img>
+        <br>
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PyluqUGSYYk?si=Oo2aXiq9Y0givlub" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Centro Educativo</p>
+        <p>centroderobotica.lh@gmail.com</p>
+    </footer>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username=== 'agustina' && password==='123') {
+                var url = "pages/alumno.html?usuario=" + username;
+                window.location.href = url;
+            } else {
+                alert("Identificacion no valida");
+            }
+            
+            if (username === 'rodrigo' && password ==='123') {
+                var url2 = "pages/docente.html?usuario=" + username ;
+                window.location.href = url2;
+            } else {
+                alert("Identificacion no valida");
+            }
+
+        });
+      </script>
+
+</body>
+</html>
